@@ -1,0 +1,181 @@
+/* General Styles */
+* {
+  margin-top: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* dahsboard */
+.dashboard {
+  flex: 1;
+  padding: 0px;
+}
+
+.dashboard-header {
+  margin-right: 1px;
+  background-color: #dde9ec;
+  padding: 0px 0px 20px 10px;
+  margin-bottom: 10px;
+}
+.dashboard h1 {
+  margin: 10px auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #333;
+}
+.dashboard-header p {
+  margin: 20px auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #333;
+}
+
+.action-buttons button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.action-buttons button:hover {
+  background-color: #c0392b;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-right: 10px;
+}
+
+/* doashboard alias*/
+.dashboard-content > div {
+  width: calc(50% - 10px);
+  background-color: white;
+  padding: 2vh;
+  width: 49%;
+  max-height: 400px;
+  margin-bottom: 3vh;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.market-prices {
+  width: 100%;
+  padding: 10px;
+}
+.market-prices table th,
+.market-prices table td {
+  text-align: right;
+  padding: 10px;
+  width: 100%;
+}
+.market-prices table tr:hover {
+  background-color: #fceac6;
+}
+.market-prices table {
+  margin-top: 2vh;
+  width: 100%;
+  height: 90%;
+}
+.market-prices table th {
+  background-color: #cccbcb;
+}
+.market-prices tr:nth-child(odd) {
+  background-color: rgb(236, 235, 235);
+}
+
+.market-prices tr:nth-child(even) {
+  background-color: white;
+}
+.market-prices table th,
+.market-prices table td {
+  padding: 10px;
+  width: 100%;
+}
+
+.inventory-global-state table {
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.inventory-global-state th {
+  background-color: #f5deb3;
+  color: #fff5ee;
+  padding: 12px;
+  font-weight: bold;
+  color: #0c0c0c;
+  text-align: right;
+}
+
+.inventory-global-state td {
+  padding:10px;
+}
+
+.inventory-global-state tr:nth-child(even) {
+  background-color: #fff8dc;
+}
+
+.inventory-global-state tr:hover {
+  background-color: #fffaf0;
+}
+
+.inventory-selver-state table {
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.inventory-selver-state th {
+  background-color: #7f92a5;
+  color: black;
+  padding: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.inventory-selver-state td {
+  padding: 10px;
+}
+
+.inventory-selver-state tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+.inventory-selver-state tr:hover {
+  background-color: #f0f8ff;
+}
+.spider-graph-canvas {
+  max-height: 90%;
+  background-color: #f7f7f7; /* changed background color to light gray */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0px;
+}
+
+.chart-gold-container, .chart-silver-container {
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+#chart-gold-container-canva,#chart-silver-container-canva {
+  width: 10%; 
+  height: 10px;
+  height: auto; /* Maintain aspect ratio */
+  background-color: #faf7f7;
+  padding-bottom: 0px;
+  overflow: auto;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="dashboard-animation.js"></script>
+    <script src="./drow-char.js"></script>
+    <link rel="stylesheet" href="dashboard-styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="dashboard-header" hidden>
+        <h1 id="welcom-dashboard">مرحبًا، شُعَب.</h1>
+        <p id="welcom-paragraphe-dashboard">
+          ستساعدك لوحة التحكم هذه على فهم بياناتك المهمة بشكل أفضل واتخاذ قرارات
+          أكثر استنارة.
+        </p>
+
+        <div class="action-buttons">
+          <button>قائمة المهام</button>
+          <button>توجيه المهمة</button>
+          <button>إضافة طلب</button>
+        </div>
+      </div>
+      <div class="dashboard-content">
+        <div class="market-prices">
+          <h3>أسعار السوق العالمية</h3>
+          <table>
+            <tr>
+              <th>مادة</th>
+              <th>سعر</th>
+            </tr>
+            <tr>
+              <td>ذهب عيار 24 قيراط نقى</td>
+              <td>$1,938.90</td>
+            </tr>
+            <tr>
+              <td>ذهب عيار 22 قيراط نقى</td>
+              <td>$1,938.900000</td>
+            </tr>
+            <tr>
+              <td>ذهب عيار 20 قيراط نقى</td>
+              <td>$1,938.90</td>
+            </tr>
+            <tr>
+              <td>ذهب عيار 18 قيراط نقى</td>
+              <td>$1,938.90</td>
+            </tr>
+            <tr>
+              <td>فضة نقية</td>
+              <td>$24.59</td>
+            </tr>
+          </table>
+        </div>
+        <div class="splider-graphe-global-view" id="splider-graphe-global-view">
+          <canvas class="spider-graph-canvas" id="spider-graph-canvas"></canvas>
+        </div>
+        <div class="inventory-global-state">
+          <h2>معلومات الذهب</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>نوع</th>
+                <th>وزن</th>
+                <th>المبلغ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>جديد</td>
+                <td>10</td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td>قديم</td>
+                <td>900</td>
+                <td>3546874</td>
+              </tr>
+              <tr>
+                <td>مكسور</td>
+                <td>9984</td>
+                <td>16841</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="inventory-selver-state">
+          <h2>المعلومات حول الفضة</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>نوع</th>
+                <th>وزن</th>
+                <th>المبلغ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>جديد</td>
+                <td>10</td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td>قديم</td>
+                <td>900</td>
+                <td>3546874</td>
+              </tr>
+              <tr>
+                <td>مكسور</td>
+                <td>9984</td>
+                <td>16841</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chart-gold-container">
+          <canvas id="chart-gold-container-canva" width="400" height="100"></canvas>
+        </div>
+        <div class="chart-silver-container">
+          <canvas id="chart-silver-container-canva" width="400" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

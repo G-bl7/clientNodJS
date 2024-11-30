@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المخزون</title>
+    <script src="main_inventory_animation.js"></script>
+    <link rel="stylesheet" href="main_inventory.css" />
+  </head>
+  <body>
+    <div id="filters-header">
+      <div id="filters-header-top">
+        <img
+          id="expand-inventory-filter-btn"
+          aria-label="expand-inventory-filter"
+          data-set.oriantation="1"
+          src="icons/chevron-left.png"
+          alt="expand filter area"
+        />
+        <h3>الفلتر</h3>
+      </div>
+      <div id="advanced-filter-inventory">
+        <div>
+          <label for="group-filter">المجموعات</label>
+          <input type="text" id="group-filter" />
+
+          <label for="purchase-date-filter">تاريخ الشراء</label>
+          <input type="text" id="purchase-date-filter" />
+
+          <label for="item-name-filter">اسم العنصر</label>
+          <input type="text" id="item-name-filter" />
+
+          <label for="category-filter">الفئة</label>
+          <input type="text" id="category-filter" />
+
+          <label for="price-range-filter">نطاق السعر</label>
+          <input
+            type="text"
+            id="price-range-filter"
+            placeholder="على سبيل المثال: 10-50"
+          />
+          <!-- Some filter will be added depending on group item type -->
+        </div>
+        <div id="advanced-filter-inventory-btn-control">
+          <button id="apply-advanced-filter-btn">تطبيق</button>
+          <button id="reset-advanced-filter-btn">إعادة تعيين</button>
+        </div>
+      </div>
+    </div>
+    <div id="inventory_actions" class="inventory_actions">
+      <div class="tabs">
+        <div class="tab active">المخزون الحالي</div>
+        <div class="tab">ذهب</div>
+        <div class="tab">فضة</div>
+      </div>
+      <div class="sales_actions">
+        <div class="actions">
+          <button id="creat_new_sales_btn" class="action-btn">
+            <span class="icon add-icon"></span>
+            إنشاء جديد
+          </button>
+          <button id="export_sales_btn" class="action-btn">
+            <span class="icon export-icon"></span>
+            تصدير
+          </button>
+          <button id="import_sales_btn" class="action-btn">
+            <span class="icon upload-icon"></span>
+            استيراد
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>الكمية الكلية</th>
+              <th>العلنية</th>
+              <th>تاريخ الشراء</th>
+              <th>التكلفة</th>
+              <th>الوزن</th>
+              <th>الحالة</th>
+              <th>عيار الذهب</th>
+              <th></th>
+              <th><div>فهرس</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>x</td>
+              <td>10</td>
+              <td>عام</td>
+              <td>2023-09-01</td>
+              <td>$150</td>
+              <td>1.5غ</td>
+              <td>متوفر</td>
+              <td>18K</td>
+              <td><img src="products/item1.jpeg" alt="عنصر 1" /></td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <div class="pagination_control">
+          <img
+            class="pagination_arrow_control"
+            src="icons/skip_previous.png"
+            alt="الانتقال إلى الصفحات السابقة"
+          />
+          <img
+            class="pagination_arrow_control"
+            src="icons/arrow_left.png"
+            alt="الصفحات السابقة"
+          />
+          <ul class="pages">
+            <li><a class="active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+          </ul>
+          <img
+            class="pagination_arrow_control"
+            src="icons/arrow_right.png"
+            alt="الصفحات التالية"
+          />
+          <img
+            class="pagination_arrow_control"
+            src="icons/skip_next.png"
+            alt="الانتقال إلى الصفحات التالية"
+          />
+        </div>
+
+        <div class="items-per-page">
+          <label for="items-per-page">العناصر في الصفحة</label>
+          <select id="items-per-page">
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

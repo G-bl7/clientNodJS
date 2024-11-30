@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login_styles.css" />
+    <script src="login_animation.js"></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="image-header">
+          <img src="icons/login2.png" alt="Header Image" />
+        </div>
+        <h2>تسجيل الدخول</h2>
+
+        <form method="POST">
+          <div class="input-group">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="اسم المستخدم"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="************"
+              autocomplete="off"
+              required
+            />
+            <span class="show-password" onclick="togglePassword()">
+              <img src="icons/visibility_on.png" alt="" class="eye-image" />
+              <img
+                src="icons/visibilty_off.png"
+                alt=""
+                class="eye-image hidden"
+              />
+            </span>
+          </div>
+          <div class="forgot-password">
+            <a href="#">هل نسيت كلمة السر؟</a>
+          </div>
+          <div>
+            <button type="submit" class="login-button" id="loginBtn">تسجيل الدخول</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

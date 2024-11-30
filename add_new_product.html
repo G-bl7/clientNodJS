@@ -1,0 +1,117 @@
+<div id="dialogOverlayAddNewProduct" class="overlay" onclick="closeDialog()">
+  <div class="dialog" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeDialog()">&times;</span>
+    <h1>إضافة منتج جديد</h1>
+
+    <form id="add-product-form" action="submit_product.php" method="POST">
+      <div id="main_blk">
+        <div id="blk_1">
+          <div class="input-group">
+            <label for="product_group_id">مجموعة المنتجات</label>
+            <select id="product_group_id" name="product_group_id" required>
+              <option value="">اختر مجموعة</option>
+              <!-- Groups will be populated dynamically -->
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="weight">الوزن</label>
+            <input
+              type="number"
+              step="0.01"
+              id="weight"
+              name="weight"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="purchase_date">تاريخ الشراء</label>
+            <input
+              type="date"
+              id="purchase_date"
+              name="purchase_date"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="purchase_price">سعر الشراء</label>
+            <input
+              type="number"
+              step="0.01"
+              id="purchase_price"
+              name="purchase_price"
+              required
+            />
+          </div>
+        </div>
+
+        <div id="blk_2">
+          <div class="input-group">
+            <label for="sell_price">سعر البيع</label>
+            <input
+              type="number"
+              step="0.01"
+              id="sell_price"
+              name="sell_price"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="status">الحالة</label>
+            <select id="status" name="status" required>
+              <option value="Available">متوفر</option>
+              <option value="Reserved">محجوز</option>
+              <option value="Sold">مباع</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="description">الوصف</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Group Attributes Section -->
+      <div class="group-attributes">
+        <h3>سمات لمجموعة المحددة</h3>
+        <div class="attributes-list">
+          <!-- Attributes will be added here dynamically based on selected group -->
+        </div>
+      </div>
+      <!-- Image Upload Section -->
+      <div class="image-upload-section">
+        <input
+          type="file"
+          id="image_path"
+          name="image_path[]"
+          multiple
+          accept="image/*"
+          style="display: none"
+        />
+        <div class="image-preview"></div>
+        <div class="upload-placeholder">
+          <p>اسحب وأفلت الصور هنا</p>
+          <button
+            type="button"
+            onclick="document.getElementById('image_path').click()"
+          >
+            <img
+              src="icons/upload-image.png"
+              alt="Upload"
+              style="width: 64px; height: 64px"
+            />
+          </button>
+        </div>
+      </div>
+      <button type="submit">إضافة منتج</button>
+    </form>
+  </div>
+</div>

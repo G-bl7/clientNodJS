@@ -1,0 +1,341 @@
+/* Dialog overlay and main container */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 1200px;
+    max-height: 90vh;
+    position: relative;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Dialog header */
+.dialog h1 {
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Form layout */
+#add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#main_blk {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left and right columns */
+#blk_1, #blk_2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form fields */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #daa19b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Image upload section */
+.image-upload-section {
+    border: 2px dashed #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.image-preview {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Group attributes section */
+.group-attributes {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.group-attributes h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.attributes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #c0392b;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e74c3c;
+}
+/* Image upload styling */
+/* Image upload styling */
+.image-upload-section {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow-y: auto;  /* Enable vertical scroll if needed */
+    max-height: 400px; /* Set maximum height */
+    padding-top: 0px;
+}
+
+.image-upload-section.drag-over {
+    background-color: rgba(74, 144, 226, 0.1);
+    border-color: #4a90e2;
+}
+
+.upload-placeholder {
+    text-align: center;
+    color: #666;
+}
+
+.upload-placeholder button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #e74c3c; /* Changed to match your theme */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-placeholder button:hover {
+    background-color: #b43e31;
+}
+
+.image-preview {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 10px; /* Space for scrollbar */
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Custom scrollbar for Webkit browsers */
+.image-preview::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-preview::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.image-preview::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.image-preview::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* When there are images, hide the placeholder */
+.image-preview:not(:empty) + .upload-placeholder {
+    display: none;
+}
+
+.image-preview-wrapper {
+    position: relative;
+    min-width: 150px; /* Fixed width instead of flexible */
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 0 0 auto; /* Prevent image shrinking */
+}
+
+.image-preview-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-image:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation for preview images */
+.image-preview-wrapper {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* When there are images, hide the placeholder */
+.image-preview:not(:empty) + .upload-placeholder {
+    display: none;
+}
+
+.image-preview-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-preview-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-image:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation for preview images */
+.image-preview-wrapper {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #main_blk {
+        flex-direction: column;
+    }
+    
+    .dialog {
+        width: 95%;
+        max-height: 95vh;
+        margin: 10px;
+    }
+}

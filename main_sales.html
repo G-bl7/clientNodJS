@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المبيعات</title>
+    <script src="main_sales_animation.js"></script>
+    <link rel="stylesheet" href="main_sales.css" />
+  </head>
+  <body>
+    <div id="filters-header">
+      <div id="filters-header-top">
+        <img
+          id="expand-sales-filter-btn"
+          aria-label="expand-sales-filter"
+          data-set.oriantation="1"
+          src="icons/chevron-left.png"
+          alt="توسيع منطقة الفلتر"
+        />
+        <h3>الفلتر</h3>
+      </div>
+      <div id="advanced-filter-sales">
+        <div>
+          <label for="group-filter">المجموعات</label>
+          <input type="text" id="group-filter" />
+
+          <label for="purchase-date-filter">تاريخ الشراء</label>
+          <input type="text" id="purchase-date-filter" />
+
+          <label for="item-name-filter">اسم السلعة</label>
+          <input type="text" id="item-name-filter" />
+
+          <label for="category-filter">الفئة</label>
+          <input type="text" id="category-filter" />
+
+          <label for="price-range-filter">نطاق السعر</label>
+          <input
+            type="text"
+            id="price-range-filter"
+            placeholder="مثال: 10-50"
+          />
+          <!-- سيتم إضافة بعض الفلاتر حسب نوع عنصر المجموعة -->
+        </div>
+        <div id="advanced-filter-sales-btn-control">
+          <button id="apply-advanced-filter-btn">تطبيق</button>
+          <button id="rest-advanced-filter-btn">إعادة تعيين</button>
+        </div>
+      </div>
+    </div>
+    <div id="sales_actions" class="sales_actions">
+      <div class="tabs">
+        <div class="tab active">المبيعات الحالية</div>
+        <div class="tab">ذهب</div>
+        <div class="tab">فضة</div>
+      </div>
+      <div class="sales_actions">
+        <div class="actions">
+          <button id="creat_new_sales_btn" class="action-btn">
+            <span class="icon add-icon"></span>
+            إنشاء جديد
+          </button>
+          <button id="export_sales_btn" class="action-btn">
+            <span class="icon export-icon"></span>
+            تصدير
+          </button>
+          <button id="import_sales_btn" class="action-btn">
+            <span class="icon upload-icon"></span>
+            استيراد
+          </button>
+        </div>
+      </div>
+      
+    </div>
+    <div class="container">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>إجمالي الكمية</th>
+              <th>العلانية</th>
+              <th>تاريخ الشراء</th>
+              <th>التكلفة</th>
+              <th>الوزن</th>
+              <th>الحالة</th>
+              <th>عيار الذهب</th>
+              <th>المنتجات</th>
+              <th><div>الرقم</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>x</td>
+              <td>10</td>
+              <td>عام</td>
+              <td>2023-09-01</td>
+              <td>$150</td>
+              <td>1.5غ</td>
+              <td>متاح</td>
+              <td>18K</td>
+              <td><img src="products/item1.jpeg" alt="عنصر 1" /></td>
+              <td><div>1</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>0</td>
+              <td>خاص</td>
+              <td>2023-08-15</td>
+              <td>$200</td>
+              <td>2.0غ</td>
+              <td>مباع</td>
+              <td>14K</td>
+              <td><img src="products/item2.jpeg" alt="عنصر 2" /></td>
+              <td><div>2</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>خاص</td>
+              <td>2023-05-05</td>
+              <td>$400</td>
+              <td>1.2غ</td>
+              <td>متاح</td>
+              <td>24K</td>
+              <td><img src="products/item5.jpeg" alt="عنصر 5" /></td>
+              <td><div>5</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>20</td>
+              <td>عام</td>
+              <td>2023-06-10</td>
+              <td>$100</td>
+              <td>3.0غ</td>
+              <td>متاح</td>
+              <td>10K</td>
+              <td><img src="products/item4.jpeg" alt="عنصر 4" /></td>
+              <td><div>4</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>5</td>
+              <td>عام</td>
+              <td>2023-07-20</td>
+              <td>$300</td>
+              <td>1.0غ</td>
+              <td>متاح</td>
+              <td>22K</td>
+              <td><img src="products/item3.jpeg" alt="عنصر 3" /></td>
+              <td><div>3</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <div class="pagination_control">
+          <img
+            class="pagination_arrow_control"
+            src="icons/skip_previous.png"
+            alt="تخطي المسارات السابقة"
+          />
+          <img
+            class="pagination_arrow_control"
+            src="icons/arrow_left.png"
+            alt="المسارات السابقة"
+          />
+          <ul class="pages">
+            <li><a class="active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+          </ul>
+          <img
+            class="pagination_arrow_control"
+            src="icons/arrow_right.png"
+            alt="تخطي المسارات التالية"
+          />
+          <img
+            class="pagination_arrow_control"
+            src="icons/skip_next.png"
+            alt="المسارات التالية"
+          />
+        </div>
+
+        <div class="items-per-page">
+          <label for="items-per-page">العناصر في الصفحة</label>
+          <select id="items-per-page">
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدير المجوهرات</title>
+    <link rel="stylesheet" href="main-styles.css" />
+    <script src="main-animation.js"></script>
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="logo-menu">
+        <span class="menu-icon" id="button_menu_dashboard">☰</span>
+        <span class="logo-text">مدير المجوهرات</span>
+      </div>
+      <div class="search-reload">
+        <input type="text" placeholder="بحث..." class="search-bar" />
+        <button class="reload-btn">
+          <img src="icons/load.png" alt="Reload" />
+        </button>
+      </div>
+      <div class="profile-section">
+        <div class="user-profile">
+          <span id="user-profile-short-name">شُعَب</span>
+          <img src="icons/anonym-person.png" alt="Profile Image" />
+        </div>
+      </div>
+    </header>
+    <aside class="sidebar" id="menu_side_bar_dashboard">
+      <nav class="sidebar-menu" aria-label="Sidebar Navigation">
+        <ul>
+          <li>
+            <button id="dashboard-btn-sidebar" aria-label="Dashboard">
+              <img src="icons/dashboard.png" alt="Dashboard Icon" />
+              <span>لوحة التحكم</span>
+            </button>
+          </li>
+          <li>
+            <button aria-label="Add New" id="AddNewProduct-sidebarmenu">
+              <img src="icons/add.png" alt="Add New Icon" />
+              <span>إضافة جديد</span>
+            </button>
+          </li>
+          <li>
+            <button aria-label="Sales" id="showSales_sidbarMenu">
+              <img src="icons/shopping-cart.png" alt="Sales Icon" />
+              <span>المبيعات</span>
+            </button>
+          </li>
+          <li id="inventory-container-div-ID">
+            <div class="inventory-container" >
+              <button
+                id="side-bar-inventory-bt"
+                aria-label="Inventory"
+                class="inventory-button"
+              >
+                <img src="icons/inventory.png" alt="Inventory Icon" />
+                <span>المخزون</span>
+              </button>
+              <button
+                id="expand-inventory-btn"
+                aria-label="Expand Inventory"
+                class="expand-button"
+                data-set.oriantation="1"
+              >      
+              </button>
+            </div>
+            <div
+              class="sidebar-menu-submenu"
+              id="sidebar-menu-submenu_Inventory"
+            >
+              <ul>
+                <li id="sidebar_groups_btn">مجموعات</li>
+                <li></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button aria-label="Setting">
+              <img src="icons/setting.png" alt="Setting Icon" />
+              <span>الإعدادات</span>
+            </button>
+          </li>
+          <li>
+            <button aria-label="Administration">
+              <img src="icons/admin-setting.png" alt="Administration Icon" />
+              <span>الإدارة</span>
+            </button>
+          </li>
+          <li>
+            <button aria-label="Reports">
+              <img src="icons/statistics.png" alt="Reports Icon" />
+              <span>التقارير</span>
+            </button>
+          </li>
+          <li>
+            <button aria-label="Users Logs">
+              <img src="icons/users-log.png" alt="Users Logs Icon" />
+              <span>سجلات المستخدمين</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <iframe
+      src="./progress_loader.html"
+      class="main-container"
+      id="progress_loader"
+    ></iframe>
+    <iframe class="main-container" id="main-container"> </iframe>
+  </body>
+</html>
